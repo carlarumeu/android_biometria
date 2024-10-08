@@ -3,6 +3,17 @@ package com.example.apellido.biometriaandroid.LOGIC;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.UUID;
+/*
+ * Nombre del fichero: Utilidades.java
+ * Descripción: Clase que proporciona métodos estáticos para la conversión y manipulación de datos en diferentes formatos como Strings, UUIDs, arrays de bytes, ints y longs. Facilita la manipulación de datos binarios y conversiones de representación.
+ * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Fecha: 3 de octubre de 2024
+ *
+ * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 3 de octubre de 2024.
+ * Contiene la implementación de diversas utilidades para la conversión de tipos de datos y manipulación de arrays de bytes, UUIDs, y otros formatos. Incluye métodos para transformar datos en representaciones binarias, hexadecimales y enteras.
+ *
+ * Todos los derechos reservados.
+ */
 
 /**
  * Clase Utilidades que contiene métodos estáticos para la manipulación de datos.

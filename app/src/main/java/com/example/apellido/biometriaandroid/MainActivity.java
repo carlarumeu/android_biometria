@@ -38,6 +38,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+/*
+ * Nombre del fichero: MainActivity.java
+ * Descripción: Clase principal que maneja la actividad principal de la aplicación de escaneo Bluetooth Low Energy (BTLE).
+ *              Esta clase se encarga de la gestión de la conexión Bluetooth, el escaneo de dispositivos BTLE,
+ *              la visualización de la información del dispositivo y el envío de datos a través de solicitudes POST.
+ * Autores: Carla Rumeu Montesinos y Elena Ruiz De La Blanca
+ * Fecha: 1 de Octubre
+ *
+ * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz De La Blanca el 1 de Octubre.
+ * Contiene la implementación de las funcionalidades principales para buscar y gestionar dispositivos Bluetooth Low Energy,
+ * así como la capacidad de enviar datos a un servidor a través de solicitudes POST.
+ *
+ * Todos los derechos reservados.
+ */
 
 /**
  * @file MainActivity.java
