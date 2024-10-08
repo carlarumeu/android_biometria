@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">biometria android</string>
+    <string name="ppm">"Ppm = "</string>
 </resources>
