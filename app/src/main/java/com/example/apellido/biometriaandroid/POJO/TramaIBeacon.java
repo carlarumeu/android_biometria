@@ -25,6 +25,7 @@ public class TramaIBeacon {
      * Obtiene el prefijo de la trama.
      * @return El prefijo de la trama.
      */
+    // getPrefijo() -> byte[]
     public byte[] getPrefijo() {
         return prefijo;
     }
@@ -33,6 +34,8 @@ public class TramaIBeacon {
      * Obtiene el UUID de la trama.
      * @return El UUID de la trama.
      */
+
+    // getUUID() -> byte[]
     public byte[] getUUID() {
         return uuid;
     }
@@ -41,6 +44,8 @@ public class TramaIBeacon {
      * Obtiene el major de la trama.
      * @return El major de la trama.
      */
+
+    // getMajor() -> byte[]
     public byte[] getMajor() {
         return major;
     }
@@ -49,6 +54,8 @@ public class TramaIBeacon {
      * Obtiene el minor de la trama.
      * @return El minor de la trama.
      */
+
+    // getMinor() -> byte[]
     public byte[] getMinor() {
         return minor;
     }
@@ -57,6 +64,8 @@ public class TramaIBeacon {
      * Obtiene el txPower de la trama.
      * @return El txPower de la trama.
      */
+
+    // getTxPower() -> byte
     public byte getTxPower() {
         return txPower;
     }
@@ -65,6 +74,8 @@ public class TramaIBeacon {
      * Obtiene los bytes de la trama.
      * @return Los bytes de la trama.
      */
+
+    // getLosBytes() -> byte[]
     public byte[] getLosBytes() {
         return losBytes;
     }
@@ -73,6 +84,7 @@ public class TramaIBeacon {
      * Obtiene los advFlags de la trama.
      * @return Los advFlags de la trama.
      */
+    // getAdvFlags() -> byte[]
     public byte[] getAdvFlags() {
         return advFlags;
     }
@@ -81,6 +93,7 @@ public class TramaIBeacon {
      * Obtiene el advHeader de la trama.
      * @return El advHeader de la trama.
      */
+    // getAdvHeader() -> byte[]
     public byte[] getAdvHeader() {
         return advHeader;
     }
@@ -89,6 +102,8 @@ public class TramaIBeacon {
      * Obtiene el companyID de la trama.
      * @return El companyID de la trama.
      */
+
+    // getCompanyID() -> byte[]
     public byte[] getCompanyID() {
         return companyID;
     }
@@ -97,6 +112,7 @@ public class TramaIBeacon {
      * Obtiene el iBeaconType de la trama.
      * @return El iBeaconType de la trama.
      */
+    // getiBeaconType() -> byte
     public byte getiBeaconType() {
         return iBeaconType;
     }
@@ -105,6 +121,7 @@ public class TramaIBeacon {
      * Obtiene el iBeaconLength de la trama.
      * @return El iBeaconLength de la trama.
      */
+    // getiBeaconLength() -> byte
     public byte getiBeaconLength() {
         return iBeaconLength;
     }
@@ -113,6 +130,7 @@ public class TramaIBeacon {
      * Constructor de la clase TramaIBeacon.
      * @param bytes Los bytes que representan la trama de un iBeacon.
      */
+    // bytes: byte[] ->TramaIBeacon()
     public TramaIBeacon(byte[] bytes ) {
         this.losBytes = bytes;
 

@@ -56,6 +56,8 @@ public class PeticionarioRESTWorker extends Worker {
      * @param context El contexto de la aplicación
      * @param params Parámetros para el Worker
      */
+
+    // Context, WorkerParameters -> PeticionarioRESTWorker()
     public PeticionarioRESTWorker(@NonNull Context context, @NonNull WorkerParameters params) {
         super(context, params);
         this.context = context;
@@ -66,6 +68,8 @@ public class PeticionarioRESTWorker extends Worker {
      *
      * @return Resultado de la ejecución (éxito o fracaso)
      */
+
+    //KEY_METHOD: Texto, KEY_URL: Texto, KEY_BODY: Texto -> doWork() -> KEY_RESPONSE_CODE: Z, KEY_RESPONSE_BODY: Texto, Result: Result
     @NonNull
     @Override
     public Result doWork() {
@@ -130,6 +134,8 @@ public class PeticionarioRESTWorker extends Worker {
      * @return HttpURLConnection configurada
      * @throws IOException Si hay un problema de conexión
      */
+
+    //urlDestination: Texto, method: Texto, requestBody: Texto -> getHttpURLConnection() -> HttpURLConnection
     private static @NonNull HttpURLConnection getHttpURLConnection(String urlDestination, String method, String requestBody) throws IOException {
         URL url = new URL(urlDestination);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -153,6 +159,8 @@ public class PeticionarioRESTWorker extends Worker {
      *
      * @param message El mensaje a mostrar en el Toast
      */
+
+    //message: Texto -> showToast()
     private void showToast(final String message) {
         // Asegurándose de que el Toast se ejecute en el hilo de la interfaz de usuario
         new android.os.Handler(android.os.Looper.getMainLooper()).post(() -> Toast.makeText(context, message, Toast.LENGTH_SHORT).show());

@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * Este método inicia un escaneo de dispositivos BTLE y registra un callback para manejar los resultados del escaneo.
      */
+    // buscarTodosLosDispositivosBTLE()
     private void buscarTodosLosDispositivosBTLE() {
         Log.d(ETIQUETA_LOG, " buscarTodosLosDispositivosBTL(): empieza ");
 
@@ -136,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param resultado El resultado del escaneo de un dispositivo BTLE.
      */
+    //resultado: ScanResult -> mostrarInformacionDispositivoBTLE()
     private void mostrarInformacionDispositivoBTLE(ScanResult resultado) {
 
 
@@ -186,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
      * Este método inicia un escaneo de dispositivos BTLE y registra un callback para manejar los resultados del escaneo.
      * Solo se procesan los resultados que corresponden a un dispositivo BTLE específico.
      */
+    // buscarEsteDispositivoBTLE()
     private void buscarEsteDispositivoBTLE() {
         Log.d(ETIQUETA_LOG, " buscarEsteDispositivoBTLE(): empieza ");
 
@@ -242,6 +245,8 @@ public class MainActivity extends AppCompatActivity {
      *
      * Este método detiene el escaneo de dispositivos BTLE que se inició previamente.
      */
+
+    // detenerBusquedaDispositivosBTLE()
     private void detenerBusquedaDispositivosBTLE() {
 
         if (this.callbackDelEscaneo == null) {
@@ -261,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * Este método muestra el valor Major de un dispositivo iBeacon si el escaneo está en curso.
      */
+    // showMajor()
     private void showMajor() {
         Log.d(ETIQUETA_LOG, " showMajor()");
 
@@ -283,6 +289,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v La vista del botón pulsado.
      */
+    // v: View -> botonBuscarDispositivosBTLEPulsado()
     public void botonBuscarDispositivosBTLEPulsado(View v) {
         Log.d(ETIQUETA_LOG, " boton buscar dispositivos BTLE Pulsado");
         this.buscarTodosLosDispositivosBTLE();
@@ -295,6 +302,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v La vista del botón pulsado.
      */
+    // v: View -> botonBuscarNuestroDispositivoBTLEPulsado()
     public void botonBuscarNuestroDispositivoBTLEPulsado(View v) {
         Log.d(ETIQUETA_LOG, " boton nuestro dispositivo BTLE Pulsado");
         this.buscarEsteDispositivoBTLE();
@@ -307,6 +315,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v La vista del botón pulsado.
      */
+    // v: View -> botonDetenerBusquedaDispositivosBTLEPulsado()
     public void botonDetenerBusquedaDispositivosBTLEPulsado(View v) {
         Log.d(ETIQUETA_LOG, " boton detener busqueda dispositivos BTLE Pulsado");
         this.detenerBusquedaDispositivosBTLE();
@@ -319,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v La vista del botón pulsado.
      */
-
+    // v: View -> botonEnviarPostPrueba()
     public void botonEnviarPostPrueba(View v) {
         Log.d(ETIQUETA_LOG, " boton Enviar Post Pulsado");
         this.enviarPostPrueba();
@@ -332,6 +341,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v La vista del botón pulsado.
      */
+    // v: View -> botonEnviarLastMajor()
     public void botonEnviarLastMajor(View v) {
         Log.d(ETIQUETA_LOG, " boton Enviar Last Major Pulsado");
         this.enviarLastMajor();
@@ -342,6 +352,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * Este método crea una solicitud de trabajo para enviar un POST de prueba a una URL específica.
      */
+    // enviarPostPrueba()
     private void enviarPostPrueba() {
         Data inputData = new Data.Builder()
                 .putString(PeticionarioRESTWorker.KEY_METHOD, "POST")
@@ -361,6 +372,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * Este método crea una solicitud de trabajo para enviar el último valor Major a una URL específica.
      */
+    //  enviarLastMajor()
     private void enviarLastMajor() {
         if(tib == null) {
             Toast.makeText(this, "No hay datos disponibles", Toast.LENGTH_SHORT).show();
@@ -390,6 +402,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param savedInstanceState El estado guardado de la instancia.
      */
+    // savedInstanceState: Bundle -> onCreate()
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -416,6 +429,7 @@ public class MainActivity extends AppCompatActivity {
      * Si el permiso es concedido, se registra un mensaje de éxito en el log.
      * Si el permiso es denegado, se registra un mensaje de error en el log.
      */
+    // RequestPermission, isGranted -> onRequestPermissionResult() -> [Texto]
     private final ActivityResultLauncher<String> requestPermissionLuancher =
             registerForActivityResult(new RequestPermission(), isGranted ->
             {
