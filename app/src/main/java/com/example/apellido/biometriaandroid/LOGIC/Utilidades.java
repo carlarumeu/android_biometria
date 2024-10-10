@@ -8,10 +8,10 @@ import java.util.UUID;
  * Descripción: Clase que proporciona métodos estáticos para la conversión y manipulación de datos
  * en diferentes formatos como Strings, UUIDs, arrays de bytes, ints y longs.
  * Facilita la manipulación de datos binarios y conversiones de representación.
- * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Autores: Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos.
  * Fecha: 5 de octubre de 2024
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 5 de octubre de 2024.
+ * Este archivo ha sido realizado por Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos el 5 de octubre de 2024.
  * Contiene la implementación de diversas utilidades para la conversión de tipos de datos y manipulación de arrays de bytes,
  * UUIDs, y otros formatos. Incluye métodos para transformar datos en representaciones binarias, hexadecimales y enteras.
  *

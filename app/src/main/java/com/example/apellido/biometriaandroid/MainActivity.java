@@ -43,10 +43,10 @@ import java.util.Objects;
  * Descripción: Clase principal que maneja la actividad principal de la aplicación de escaneo Bluetooth Low Energy (BTLE).
  *              Esta clase se encarga de la gestión de la conexión Bluetooth, el escaneo de dispositivos BTLE,
  *              la visualización de la información del dispositivo y el envío de datos a través de solicitudes POST.
- * Autores: Carla Rumeu Montesinos y Elena Ruiz De La Blanca
+ * Autores: Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos.
  * Fecha: 30 de Septiembre
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz De La Blanca el 30 de Septiembre.
+ * Este archivo ha sido realizado por Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos el 30 de Septiembre.
  * Contiene la implementación de las funcionalidades principales para buscar y gestionar dispositivos Bluetooth Low Energy,
  * así como la capacidad de enviar datos a un servidor a través de solicitudes POST.
  *

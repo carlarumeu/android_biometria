@@ -12,10 +12,10 @@ import java.util.Locale;
 /*
  * Nombre del fichero: Medicion.java
  * Descripción: Clase que representa una medición de gas.
- * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Autores: Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos.
  * Fecha: 2 de octubre de 2024
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 2 de octubre de 2024.
+ * Este archivo ha sido realizado por Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos el 2 de octubre de 2024.
  * Contiene la definición de la clase Medicion, que incluye información sobre una medición de gas,
  * como la medida, el lugar, el tipo de gas y la hora de la medición.
  *

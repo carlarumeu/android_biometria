@@ -21,10 +21,10 @@ import java.net.URL;
  * Descripción: Clase que extiende Worker para realizar peticiones REST a la API de mediciones.
  * Maneja distintos tipos de solicitudes HTTP (GET, POST, etc.) y procesa las respuestas de la API,
  * mostrando mensajes al usuario a través de Toasts.
- * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Autores: Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos.
  * Fecha: 7 de octubre de 2024
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 7 de octubre de 2024.
+ * Este archivo ha sido realizado por Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos el 7 de octubre de 2024.
  * Contiene la implementación de un Worker de Android para realizar solicitudes REST y manejar las respuestas de la API.
  * Incluye manejo de errores y muestra notificaciones al usuario según el código de respuesta.
  *
