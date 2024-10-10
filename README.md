@@ -36,6 +36,10 @@ La aplicación obtiene datos automáticamente y los envia al servidor.
 
 Este proyecto está licenciado bajo la MIT License.
 
+## Proyectos relacionados
+https://github.com/carlarumeu/web_biometria
+https://github.com/carlarumeu/Arduino-Biometria
+
 ## Autores
 
 [Carla Rumeu Montesinos](https://github.com/carlarumeu "Carla Rumeu Montesinos")

@@ -6,10 +6,10 @@ import java.util.Arrays;
 /*
  * Nombre del fichero: TramaIBeacon.java
  * Descripción: Clase que representa la trama de un iBeacon.
- * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Autores: Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos.
  * Fecha: 1 de octubre de 2024
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 1 de octubre de 2024.
+ * Este archivo ha sido realizado por Álex Escrivá Caravaca, Elena Ruiz de la Blanca, Carla Rumeu Montesinos el 1 de octubre de 2024.
  * Contiene la definición de la clase TramaIBeacon, que incluye información sobre la trama de un iBeacon,
  * como el prefijo, UUID, major, minor, txPower, y otros campos relacionados.
  *
