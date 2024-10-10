@@ -3,6 +3,20 @@ package com.example.apellido.biometriaandroid.LOGIC;
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.UUID;
+/*
+ * Nombre del fichero: Utilidades.java
+ * Descripción: Clase que proporciona métodos estáticos para la conversión y manipulación de datos
+ * en diferentes formatos como Strings, UUIDs, arrays de bytes, ints y longs.
+ * Facilita la manipulación de datos binarios y conversiones de representación.
+ * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Fecha: 5 de octubre de 2024
+ *
+ * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 5 de octubre de 2024.
+ * Contiene la implementación de diversas utilidades para la conversión de tipos de datos y manipulación de arrays de bytes,
+ * UUIDs, y otros formatos. Incluye métodos para transformar datos en representaciones binarias, hexadecimales y enteras.
+ *
+ * Todos los derechos reservados.
+ */
 
 /**
  * Clase Utilidades que contiene métodos estáticos para la manipulación de datos.
@@ -14,6 +28,8 @@ public class Utilidades {
      * @param texto El String a convertir.
      * @return El array de bytes correspondiente al String.
      */
+
+    // texto: Texto -> stringToBytes() -> byte[]
     public static byte[] stringToBytes ( String texto ) {
         return texto.getBytes();
         // byte[] b = string.getBytes(StandardCharsets.UTF_8); // Ja
@@ -25,6 +41,8 @@ public class Utilidades {
      * @return El UUID correspondiente al String.
      * @throws Error si el String no tiene 16 caracteres.
      */
+
+    //uuid: Texto -> stringToUUID() -> UUID
     public static UUID stringToUUID(String uuid ) {
         if ( uuid.length() != 16 ) {
             throw new Error( "stringUUID: string no tiene 16 caracteres ");
@@ -47,6 +65,8 @@ public class Utilidades {
      * @param uuid El UUID a convertir.
      * @return El String correspondiente al UUID.
      */
+
+    //uuid: UUID -> uuidToString() -> Texto
     public static String uuidToString ( UUID uuid ) {
         return bytesToString( dosLongToBytes( uuid.getMostSignificantBits(), uuid.getLeastSignificantBits() ) );
     } // ()
@@ -56,6 +76,8 @@ public class Utilidades {
      * @param uuid El UUID a convertir.
      * @return El String en formato hexadecimal correspondiente al UUID.
      */
+
+    //uuid: UUID -> uuidToHexString() -> Texto
     public static String uuidToHexString ( UUID uuid ) {
         return bytesToHexString( dosLongToBytes( uuid.getMostSignificantBits(), uuid.getLeastSignificantBits() ) );
     } // ()
@@ -65,6 +87,8 @@ public class Utilidades {
      * @param bytes El array de bytes a convertir.
      * @return El String correspondiente al array de bytes.
      */
+
+    // bytes: byte[] -> bytesToString() -> Texto
     public static String bytesToString( byte[] bytes ) {
         if (bytes == null ) {
             return "";
@@ -83,6 +107,8 @@ public class Utilidades {
      * @param menosSignificativos El segundo long a convertir.
      * @return El array de bytes correspondiente a los dos longs.
      */
+
+    // masSignificativos: Z, menosSignificativos: Z -> dosLongToBytes() -> byte[]
     public static byte[] dosLongToBytes( long masSignificativos, long menosSignificativos ) {
         ByteBuffer buffer = ByteBuffer.allocate( 2 * Long.BYTES );
         buffer.putLong( masSignificativos );
@@ -95,6 +121,8 @@ public class Utilidades {
      * @param bytes El array de bytes a convertir.
      * @return El int correspondiente al array de bytes.
      */
+
+    // bytes: byte[] -> bytesToInt() -> Z
     public static int bytesToInt( byte[] bytes ) {
 
         return new BigInteger(bytes).intValue();
@@ -105,6 +133,8 @@ public class Utilidades {
      * @param bytes El array de bytes a convertir.
      * @return El long correspondiente al array de bytes.
      */
+
+    // bytes: byte[] -> bytesToLong() -> Z
     public static long bytesToLong( byte[] bytes ) {
 
         return new BigInteger(bytes).longValue();
@@ -116,6 +146,7 @@ public class Utilidades {
      * @return El int correspondiente al array de bytes.
      * @throws Error si el array de bytes tiene más de 4 bytes.
      */
+    // bytes: byte[] -> bytesToIntOK() -> Z
     public static int bytesToIntOK( byte[] bytes ) {
         if (bytes == null ) {
             return 0;
@@ -164,6 +195,7 @@ public class Utilidades {
      * @return El valor entero sin signo correspondiente a los dos bytes
      *         proporcionados. Si el array no tiene longitud 2, devuelve 1.
      */
+    // bytes: byte[] -> majorToUnisgnedInt() -> Z
     public static int majorToUnisgnedInt( byte[] bytes ) {
         if (bytes.length != 2 ) {
             return 1;
@@ -176,6 +208,8 @@ public class Utilidades {
      * @param bytes El array de bytes a convertir.
      * @return El String en formato hexadecimal correspondiente al array de bytes.
      */
+
+    // bytes: byte[] -> bytesToHexString() -> Texto
     public static String bytesToHexString( byte[] bytes ) {
 
         if (bytes == null ) {
