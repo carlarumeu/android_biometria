@@ -44,9 +44,9 @@ import java.util.Objects;
  *              Esta clase se encarga de la gestión de la conexión Bluetooth, el escaneo de dispositivos BTLE,
  *              la visualización de la información del dispositivo y el envío de datos a través de solicitudes POST.
  * Autores: Carla Rumeu Montesinos y Elena Ruiz De La Blanca
- * Fecha: 1 de Octubre
+ * Fecha: 30 de Septiembre
  *
- * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz De La Blanca el 1 de Octubre.
+ * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz De La Blanca el 30 de Septiembre.
  * Contiene la implementación de las funcionalidades principales para buscar y gestionar dispositivos Bluetooth Low Energy,
  * así como la capacidad de enviar datos a un servidor a través de solicitudes POST.
  *
@@ -194,11 +194,6 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(ETIQUETA_LOG, "  buscarEsteDispositivoBTLE(): instalamos scan callback ");
 
-
-
-
-
-
         this.callbackDelEscaneo = new ScanCallback() {
             @Override
             public void onScanResult(int callbackType, ScanResult resultado) {
@@ -233,10 +228,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // Iniciar escaneig amb filtre
+        // Iniciar escaneo con filtro
         this.elEscanner.startScan(this.callbackDelEscaneo);
 
-        // Know if the sensor scan is running
+        // saber si el sensor está escaneando
         isScanning = true;
     } // ()
 
@@ -356,8 +351,8 @@ public class MainActivity extends AppCompatActivity {
     private void enviarPostPrueba() {
         Data inputData = new Data.Builder()
                 .putString(PeticionarioRESTWorker.KEY_METHOD, "POST")
-                .putString(PeticionarioRESTWorker.KEY_URL, "http://192.168.18.2:80/mediciones")
-                .putString(PeticionarioRESTWorker.KEY_BODY, "{ \"medida\": 50.5, \"lugar\": \"Zona Industrial\", \"tipo_gas\": \"CO2\", \"hora\": \"2024-09-26 14:30:00\" }")
+                .putString(PeticionarioRESTWorker.KEY_URL, "http://192.168.18.134:3000/mediciones")
+                .putString(PeticionarioRESTWorker.KEY_BODY, "{ \"medida\": 20.25, \"lugar\": \"EPSG\", \"tipo_gas\": \"CO2\", \"hora\": \"2024-09-30 14:00:00\" }")
                 .build();
         // Start the Worker to make the request
         OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(PeticionarioRESTWorker.class)
@@ -385,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(ETIQUETA_LOG, " JSON: " + json);
         Data inputData = new Data.Builder()
                 .putString(PeticionarioRESTWorker.KEY_METHOD, "POST")
-                .putString(PeticionarioRESTWorker.KEY_URL, "http://192.168.18.2:80/mediciones")
+                .putString(PeticionarioRESTWorker.KEY_URL, "http://192.168.18.134:3000/mediciones")
                 .putString(PeticionarioRESTWorker.KEY_BODY, json)
                 .build();
         OneTimeWorkRequest workRequest = new OneTimeWorkRequest.Builder(PeticionarioRESTWorker.class)

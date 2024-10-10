@@ -3,6 +3,19 @@ package com.example.apellido.biometriaandroid.POJO;
 // -----------------------------------------------------------------------------------
 import java.util.Arrays;
 
+/*
+ * Nombre del fichero: TramaIBeacon.java
+ * Descripción: Clase que representa la trama de un iBeacon.
+ * Autores: Carla Rumeu Montesinos y Elena Ruiz de la Blanca
+ * Fecha: 1 de octubre de 2024
+ *
+ * Este archivo ha sido realizado por Carla Rumeu Montesinos y Elena Ruiz de la Blanca el 1 de octubre de 2024.
+ * Contiene la definición de la clase TramaIBeacon, que incluye información sobre la trama de un iBeacon,
+ * como el prefijo, UUID, major, minor, txPower, y otros campos relacionados.
+ *
+ * Todos los derechos reservados.
+ */
+
 /**
  * Clase TramaIBeacon que representa la trama de un iBeacon.
  */
